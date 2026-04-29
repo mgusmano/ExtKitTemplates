@@ -22,8 +22,9 @@
 		};
 	</script>
 
-  <!-- The line below must be kept intact for Sencha Cmd to build your application -->
-  <script id="microloader" data-app="066165cf-53bf-46ee-9bee-53afff0630ad" type="text/javascript" src="generatedFiles/bootstrap.js"></script>
+  	<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+  	<script id="microloader" data-app="066165cf-53bf-46ee-9bee-53afff0630ad" type="text/javascript" src="generatedFiles/bootstrap.js"></script>
+	<script type="module" src="./vite/imports.es.js"></script>
 </head>
   <body class="launching">
     <div id="splash" style="margin-top:20%;font-family:Arial;font-size:64px;text-align:center;color:#404040;">
