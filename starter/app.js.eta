@@ -1,0 +1,6 @@
+Ext.application({
+	extend: "<%= it.name %>.Application",
+	name: "<%= it.name %>",
+	requires: ["<%= it.name %>.*"],
+	mainView: "<%= it.name %>.view.main.Main",
+});

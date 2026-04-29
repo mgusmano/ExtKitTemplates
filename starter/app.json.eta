@@ -1,0 +1,190 @@
+{
+	"name": "<%= it.name %>",
+	"namespace": "<%= it.name %>",
+	"id": "<%= it.id %>",
+	"theme": "<%= it.theme %>",
+	"toolkit": "<%= it.toolkit %>",
+	"requires": [],
+	"version": "2.0.0.0",
+	"indexHtmlPath": "index.html",
+	"framework": "ext",
+	"js": [
+		{
+			"path": "${framework.dir}/build/ext-modern-all-debug.js"
+		},
+		{
+			"path": "./vite/imports.es.js"
+		},
+		{
+			"path": "app.js",
+			"bundle": true
+		}
+	],
+	"css": [
+		{
+			"path": "${build.out.css.path}",
+			"bundle": true,
+			"exclude": [
+				"fashion"
+			]
+		}
+	],
+	"language": {
+		"js": {
+			"input": "ES2022"
+		}
+	},
+	"output": {
+		"base": "${workspace.build.dir}/${build.environment}/${app.name}",
+		"deltas": false,
+		"cache": {
+			"enable": true
+		},
+		"appCache": {
+			"enable": true
+		},
+		"framework": {
+			"path": "ext-${workspace.frameworks.ext.version}.js",
+			"enable": true
+		}
+	},
+	"production": {
+		"deltas": {
+			"enable": false
+		},
+		"cache": {
+			"enable": true
+		},
+		"output": {
+			"js": {
+				"path": "code-${app.name}.js",
+				"enable": true
+			},
+			"framework": {
+				"path": "ext-${workspace.frameworks.ext.version}.js"
+			},
+			"microloader": {
+				"embed": true,
+				"enable": true,
+				"path": "code-microloader.js"
+			},
+			"appCache": {
+				"enable": true,
+				"path": "cache.appcache"
+			}
+		},
+		"loader": {
+			"cache": "${build.timestamp}"
+		},
+		"compressor": {
+			"type": "yui",
+			"zlanguageIn": "ECMASCRIPT_5",
+			"zlanguageOut": "ECMASCRIPT_5",
+			"compression": "whitespace",
+			"polyfills": "none",
+			"warningLevel": "verbose"
+		}
+	},
+	"testing": {
+		"output": {
+			"js": {
+				"path": "code-${app.name}-debug.js",
+				"enable": true
+			},
+			"framework": {
+				"path": "ext-${workspace.frameworks.ext.version}-debug.js"
+			}
+		}
+	},
+	"development": {
+		"tags": [
+			"xfashion"
+		],
+		"fashion": {
+			"inliner": {
+				"enable": true,
+				"excludes": [
+					".*Roboto-*",
+					".*ExtJS*",
+					".*OpenSans.*",
+					".*font.?awesome.*"
+				]
+			}
+		},
+		"watch": {
+			"delay": 0,
+			"liveUpdate": true
+		}
+	},
+	"classpath": [
+		"app"
+	],
+	"overrides": [
+		"${app.dir}/overrides"
+	],
+	"sass": {
+		"namespace": "<%= it.name %>",
+		"generated": {
+			"var": "sass/save.scss",
+			"src": "sass/save"
+		},
+		"etc": [
+			"sass/etc/all.scss"
+		],
+		"var": [
+			"sass/var/all.scss",
+			"sass/var"
+		],
+		"src": [
+			"sass/src"
+		]
+	},
+	"loader": {
+		"cache": true,
+		"cacheParam": "_dc"
+	},
+	"bootstrap": {
+		"base": "${app.dir}",
+		"manifest": "generatedFiles/bootstrap.json",
+		"microloader": "generatedFiles/bootstrap.js",
+		"css": "generatedFiles/bootstrap.css"
+	},
+	"cache": {
+		"enable": false,
+		"deltas": true
+	},
+	"appCache": {
+		"cache": [
+			"index.html"
+		],
+		"network": [
+			"*"
+		],
+		"fallback": []
+	},
+	"resources": [
+		{
+			"path": "resources",
+			"output": "shared"
+		}
+	],
+	"archivePath": "archive",
+	"slicer": {
+		"skip": true
+	},
+	"ignore": [
+		"(^|/)CVS(/?$|/.*?$)"
+	],
+	"fashion": {
+		"missingParameters": "warning",
+		"inliner": {
+			"enable": false,
+			"report": true,
+			"excludes": [
+				".*Roboto-*",
+				".*OpenSans.*",
+				".*font.?awesome.*"
+			]
+		}
+	}
+}
