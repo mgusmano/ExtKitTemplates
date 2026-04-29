@@ -11,8 +11,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@sencha/cmd": "^8.0.0",
-    "@sencha/extkit": "^0.0.101",
-    "vite": "^8.0.10"
+
   }
 }
