@@ -7,6 +7,19 @@ Ext.define("<%= it.projectname %>.Application", {
 			quickTips: true,
 		},
 	},
+
+	removeSplash: function () {
+		Ext.getBody().removeCls('launching')
+		var elem = document.getElementById("splash")
+		elem.parentNode.removeChild(elem)
+	},
+
+	launch: function () {
+		this.removeSplash()
+		//var whichView = 'mainview'
+		//Ext.Viewport.add([{xtype: whichView}])
+	},
+
 	onAppUpdate: function () {
 		Ext.Msg.confirm(
 			"Application Update",
