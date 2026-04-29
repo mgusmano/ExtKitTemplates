@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html manifest="" lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes"
-		/>
-		<meta name="description" content="min application" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title><%= it.projectname %></title>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes"
+	/>
+	<meta name="description" content="min application" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<title><%= it.projectname %></title>
 
-		<!-- The line below must be kept intact for Sencha Cmd to build your application -->
-		<script
-			id="microloader"
-			data-app="<%= it.id %>"
-			type="text/javascript"
-			src="generatedFiles/bootstrap.js"
-		></script>
-		<script type="module" src="./vite/imports.es.js"></script>
-	</head>
-	<body></body>
+	<script type="text/javascript">
+		var Ext = Ext || {};
+		Ext.beforeLoad = function (tags) {
+		//var s = location.search;
+		var profile;
+		profile = 'desktop';
+		Ext.manifest ='generatedFiles/' + profile;
+		};
+	</script>
+
+  <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+  <script id="microloader" data-app="066165cf-53bf-46ee-9bee-53afff0630ad" type="text/javascript" src="generatedFiles/bootstrap.js"></script>
+</head>
+  <body class="launching">
+    <div id="splash" style="margin-top:20%;font-family:Arial;font-size:64px;text-align:center;color:#404040;">
+      <div id="theLoadingText">LOADING...</div>
+      <i style="margin:20px;" class="fa fa-spinner fa-spin"></i>
+    </div>
+  </body>
 </html>
