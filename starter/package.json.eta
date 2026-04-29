@@ -4,7 +4,13 @@
   "description": "ExtKit created package.json",
   "main": "imports.js",
   "scripts": {
-   "dev": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs"
+    "dev": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs",
+    "build:testing": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs",
+    "build:production": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs",
+    "demo:testing": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs",
+    "demo:production": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs",
+    "serve:testing": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs",
+    "serve:production": "node ./node_modules/@sencha/extkit/ExtKitNpm.cjs"
   },
   "keywords": [],
   "author": "Marc Gusmano",
