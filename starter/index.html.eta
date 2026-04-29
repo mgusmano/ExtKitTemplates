@@ -15,7 +15,7 @@
 		<!-- The line below must be kept intact for Sencha Cmd to build your application -->
 		<script
 			id="microloader"
-			data-app="73c29455-21dd-419b-9646-b0396e121e39"
+			data-app="<%= it.id %>"
 			type="text/javascript"
 			src="generatedFiles/bootstrap.js"
 		></script>
