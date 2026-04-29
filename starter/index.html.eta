@@ -16,9 +16,9 @@
 		var Ext = Ext || {};
 		Ext.beforeLoad = function (tags) {
 		//var s = location.search;
-		var profile;
-		profile = 'desktop';
-		Ext.manifest ='generatedFiles/' + profile;
+		//var profile;
+		//profile = 'desktop';
+		//Ext.manifest ='generatedFiles/' + profile;
 		};
 	</script>
 

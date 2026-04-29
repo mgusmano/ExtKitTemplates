@@ -10,6 +10,9 @@
 	"framework": "ext",
 	"js": [
 		{
+			"path": "./vite/imports.es.js"
+		},
+		{
 			"path": "app.js",
 			"bundle": true
 		}
