@@ -9,7 +9,7 @@
 	/>
 	<meta name="description" content="min application" />
 	<meta name="mobile-web-app-capable" content="yes" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="./resources/favicon.ico" />
 	<title><%= it.projectname %></title>
 
 	<script type="text/javascript">
