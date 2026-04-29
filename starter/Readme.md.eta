@@ -1,6 +1,2 @@
 # <%= it.projectname %>
-
-
-
-
 ext@<%= it.sdkversion %>
