@@ -5,13 +5,10 @@
 	"theme": "<%= it.theme %>",
 	"toolkit": "<%= it.toolkit %>",
 	"requires": [],
-	"version": "2.0.0.0",
+	"version": "1.0.0.0",
 	"indexHtmlPath": "index.html",
 	"framework": "ext",
 	"js": [
-		{
-			"path": "${framework.dir}/build/ext-modern-all-debug.js"
-		},
 		{
 			"path": "./vite/imports.es.js"
 		},
