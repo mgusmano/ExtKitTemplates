@@ -1,0 +1,5 @@
+# <%= it.projectname %>
+
+# vite folder
+
+ext@<%= it.sdkversion %>
