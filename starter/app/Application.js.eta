@@ -1,6 +1,6 @@
-Ext.define("<%= it.name %>.Application", {
+Ext.define("<%= it.projectname %>.Application", {
 	extend: "Ext.app.Application",
-	name: "<%= it.name %>",
+	name: "<%= it.projectname %>",
 	quickTips: false,
 	platformConfig: {
 		desktop: {

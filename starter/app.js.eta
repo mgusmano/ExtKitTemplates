@@ -1,6 +1,6 @@
 Ext.application({
-	extend: "<%= it.name %>.Application",
-	name: "<%= it.name %>",
-	requires: ["<%= it.name %>.*"],
-	mainView: "<%= it.name %>.view.main.Main",
+	extend: "<%= it.projectname %>.Application",
+	name: "<%= it.projectname %>",
+	requires: ["<%= it.projectname %>.*"],
+	mainView: "<%= it.projectname %>.view.main.Main",
 });

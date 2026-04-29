@@ -1,4 +1,4 @@
-Ext.define("<%= it.name %>.view.hmr.HmrController", {
+Ext.define("<%= it.projectname %>.view.hmr.HmrController", {
   extend: "Ext.app.ViewController",
   alias: "controller.form-hmr",
 });

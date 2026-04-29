@@ -1,6 +1,6 @@
 {
-	"name": "<%= it.name %>",
-	"namespace": "<%= it.name %>",
+	"name": "<%= it.projectname %>",
+	"namespace": "<%= it.projectname %>",
 	"id": "<%= it.id %>",
 	"theme": "<%= it.theme %>",
 	"toolkit": "<%= it.toolkit %>",
@@ -120,7 +120,7 @@
 		"${app.dir}/overrides"
 	],
 	"sass": {
-		"namespace": "<%= it.name %>",
+		"namespace": "<%= it.projectname %>",
 		"generated": {
 			"var": "sass/save.scss",
 			"src": "sass/save"

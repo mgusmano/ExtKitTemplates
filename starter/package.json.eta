@@ -1,5 +1,5 @@
 {
-  "name": "<%= it.name %>",
+  "name": "<%= it.projectname %>",
   "version": "1.0.0",
   "description": "ExtKit created package.json",
   "main": "imports.js",

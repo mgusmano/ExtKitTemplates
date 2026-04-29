@@ -1,4 +1,4 @@
-Ext.define("<%= it.name %>.view.hmr.Hmr", {
+Ext.define("<%= it.projectname %>.view.hmr.Hmr", {
 	extend: "Ext.form.Panel",
 	xtype: "mainhmr",
 	title: "Hmr",

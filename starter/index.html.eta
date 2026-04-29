@@ -10,7 +10,7 @@
 		<meta name="description" content="min application" />
 		<meta name="mobile-web-app-capable" content="yes" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title><%= it.name %></title>
+		<title><%= it.projectname %></title>
 
 		<!-- The line below must be kept intact for Sencha Cmd to build your application -->
 		<script
