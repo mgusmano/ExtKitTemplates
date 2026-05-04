@@ -1,0 +1,5 @@
+console.log("HmrController.mjs")
+Ext.define("<%= it.projectname %>.view.hmr.HmrController", {
+  extend: "Ext.app.ViewController",
+  alias: "controller.form-hmr",
+});

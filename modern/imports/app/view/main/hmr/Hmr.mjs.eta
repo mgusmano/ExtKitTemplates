@@ -1,3 +1,8 @@
+console.log("Hmr.mjs");
+import "./HmrController.mjs";
+import "./HmrModel.mjs";
+import _find from "lodash.find";
+
 Ext.define("<%= it.projectname %>.view.hmr.Hmr", {
 	extend: "Ext.form.Panel",
 	xtype: "mainhmr",
@@ -5,7 +10,6 @@ Ext.define("<%= it.projectname %>.view.hmr.Hmr", {
 	controller: "form-hmr",
 	viewModel: "form-hmr",
 	bodyPadding: "10 20 10 20",
-	// use this to test sass. $base-color: green;
 	items: [
 		{
 			xtype: "displayfield",
@@ -20,6 +24,21 @@ Ext.define("<%= it.projectname %>.view.hmr.Hmr", {
 			xtype: "button",
 			text: "Increment",
 			handler: function (button) {
+				const users = [
+					{ id: 1, name: "Barney", active: true },
+					{ id: 2, name: "Fred", active: false },
+					{ id: 3, name: "Pebbles", active: true },
+				];
+				// Find the first user who is NOT active
+				// const result = Ext._find(users, function(u) {
+				// 	return !u.active;
+				// });
+				const result = _find(users, function (u) {
+					return !u.active;
+				});
+				console.log(result);
+				// Output: { id: 2, name: 'Fred', active: false }
+
 				const vm = button.lookupViewModel();
 				if (vm) {
 					const currentCount = vm.get("count") || 0;

@@ -1,0 +1,10 @@
+console.log("app.mjs");
+import "./app/Application.mjs";
+import "./app/view/main/Main.mjs";
+
+Ext.application({
+	extend: "<%= it.projectname %>.Application",
+	name: "<%= it.projectname %>",
+	requires: ["<%= it.projectname %>.*"],
+	mainView: "<%= it.projectname %>.view.main.Main",
+});

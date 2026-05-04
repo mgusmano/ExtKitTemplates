@@ -1,0 +1,8 @@
+console.log("HmrModel.mjs")
+Ext.define("<%= it.projectname %>.view.hmr.HmrModel", {
+  extend: "Ext.app.ViewModel",
+  alias: "viewmodel.form-hmr",
+  data: {
+    count: 0,
+  },
+});

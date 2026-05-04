@@ -2,7 +2,7 @@
 	"name": "<%= it.projectname %>",
 	"namespace": "<%= it.projectname %>",
 	"id": "<%= it.id %>",
-	"theme": "<%= it.theme %>",
+	"theme": "theme-<%= it.theme %>",
 	"toolkit": "<%= it.toolkit %>",
 	"requires": [],
 	"version": "1.0.0.0",
@@ -10,20 +10,17 @@
 	"framework": "ext",
 	"js": [
 		{
-			"path": "./vite/imports.es.js"
+			"path": "./e/ext-modern-all.js"
 		},
 		{
-			"path": "app.js",
-			"bundle": true
+			"path": "./vite/imports.es.js"
 		}
 	],
 	"css": [
 		{
 			"path": "${build.out.css.path}",
 			"bundle": true,
-			"exclude": [
-				"fashion"
-			]
+			"exclude": ["fashion"]
 		}
 	],
 	"language": {
@@ -94,18 +91,11 @@
 		}
 	},
 	"development": {
-		"tags": [
-			"xfashion"
-		],
+		"tags": ["xfashion"],
 		"fashion": {
 			"inliner": {
 				"enable": true,
-				"excludes": [
-					".*Roboto-*",
-					".*ExtJS*",
-					".*OpenSans.*",
-					".*font.?awesome.*"
-				]
+				"excludes": [".*Roboto-*", ".*ExtJS*", ".*OpenSans.*", ".*font.?awesome.*"]
 			}
 		},
 		"watch": {
@@ -113,28 +103,17 @@
 			"liveUpdate": true
 		}
 	},
-	"classpath": [
-		"app"
-	],
-	"overrides": [
-		"${app.dir}/overrides"
-	],
+	"classpath": ["app"],
+	"overrides": ["${app.dir}/overrides"],
 	"sass": {
-		"namespace": "<%= it.projectname %>",
+		"namespace": "min",
 		"generated": {
 			"var": "sass/save.scss",
 			"src": "sass/save"
 		},
-		"etc": [
-			"sass/etc/all.scss"
-		],
-		"var": [
-			"sass/var/all.scss",
-			"sass/var"
-		],
-		"src": [
-			"sass/src"
-		]
+		"etc": ["sass/etc/all.scss"],
+		"var": ["sass/var/all.scss", "sass/var"],
+		"src": ["sass/src"]
 	},
 	"loader": {
 		"cache": true,
@@ -151,12 +130,8 @@
 		"deltas": true
 	},
 	"appCache": {
-		"cache": [
-			"index.html"
-		],
-		"network": [
-			"*"
-		],
+		"cache": ["index.html"],
+		"network": ["*"],
 		"fallback": []
 	},
 	"resources": [
@@ -170,19 +145,13 @@
 	"slicer": {
 		"skip": true
 	},
-	"ignore": [
-		"(^|/)CVS(/?$|/.*?$)"
-	],
+	"ignore": ["(^|/)CVS(/?$|/.*?$)"],
 	"fashion": {
 		"missingParameters": "warning",
 		"inliner": {
 			"enable": false,
 			"report": true,
-			"excludes": [
-				".*Roboto-*",
-				".*OpenSans.*",
-				".*font.?awesome.*"
-			]
+			"excludes": [".*Roboto-*", ".*OpenSans.*", ".*font.?awesome.*"]
 		}
 	}
 }

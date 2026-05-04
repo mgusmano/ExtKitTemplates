@@ -1,0 +1,42 @@
+console.log("Main.mjs")
+import "./MainController.mjs"
+import "./MainModel.mjs"
+import "./hmr/Hmr.mjs"
+
+Ext.define("<%= it.projectname %>.view.main.Main", {
+	extend: "Ext.tab.Panel",
+	xtype: "app-main",
+	//requires: ["Ext.MessageBox", "Ext.layout.Fit"],
+	controller: "main",
+	viewModel: "main",
+	defaults: {
+		tab: {
+			iconAlign: "top",
+		},
+	},
+	tabBarPosition: "bottom",
+	items: [
+		{
+	  	title: "Home",
+			iconCls: "x-fa fa-solid fa-arrow-up-right-dots",
+			tab: {
+				ariaAttributes: {
+					"aria-label": "Home",
+				},
+			},
+		  bind: {
+		    html: `<div style="font-size:24px;margin: 10px 10px 10px 10px;">Home</div>`,
+		  },
+		},
+		{
+		  title: "HMR",
+			iconCls: "x-fa fa-solid fa-arrow-up-right-dots",
+			tab: {
+				ariaAttributes: {
+					"aria-label": "HMR",
+				},
+			},
+			items: [{ xtype: "mainhmr" }],
+		},
+	],
+});
